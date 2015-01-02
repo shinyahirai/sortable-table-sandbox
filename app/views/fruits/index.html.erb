@@ -1,0 +1,27 @@
+<h1>Listing fruits</h1>
+
+<table class="table table-bordered table-sortable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fruits.each do |fruit| %>
+      <tr class="item" data-model-name="<%= fruit.class.name.underscore %>" data-update-url="<%= fruit_sort_path(fruit) %>"s>
+        <td><%= fruit.name %></td>
+        <td><%= link_to 'Show', fruit %></td>
+        <td><%= link_to 'Edit', edit_fruit_path(fruit) %></td>
+        <td><%= link_to 'Destroy', fruit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fruit', new_fruit_path %>
