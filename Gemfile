@@ -3,9 +3,19 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
 
+# 認証処理
+gem 'devise', '~> 3.2.4'
+
+# bootstrap
+gem 'bootstrap-sass', '~> 3.1.1.1'
+gem 'bootstrap-sass-extras', '~> 0.0.6'
+
+# sortble
 gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
+
+
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
